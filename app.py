@@ -147,7 +147,6 @@ elif selected == 'Input & Predict':
                 st.write(f"##### :blue[Heart Attack Possibility:]")
                 st.markdown("<hr style='margin-top: 1px;'>", unsafe_allow_html=True)
                 st.table(df)
-                st.balloons()
 
     with colb:
         fbutton = st.button(":yellow[Predict Multiple]", on_click=switch_fbutton_state, icon=':material/table:')
@@ -194,7 +193,7 @@ elif selected == 'Input & Predict':
                         st.write("Total Inputs given:", len(df))
                         st.write("Predicted Yes:",len(df[df['Heart Disease']=='Yes']))
                         st.write("Predicted No:",len(df[df['Heart Disease']=='No']))
-                        st.balloons()
                         
                         csv = df.to_csv(index=False)
                         st.download_button(label="Download Above Predictions as CSV",data=csv,file_name="predictions.csv",mime="text/csv")
+
